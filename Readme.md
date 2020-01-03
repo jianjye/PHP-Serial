@@ -1,6 +1,12 @@
 PHP Serial
 ==========
 
+**
+This is a fork from the original [Xowap\PHP-Serial](https://github.com/Xowap/PHP-Serial) repository. Main updates were to make it autoloadable via composer. Last tested working on PHP 7.3.5 on MacOs in 2020.
+
+I do not intend to maintain this package beyond my own (limited) use case.
+**
+
 PHP Serial was written at a time where I did not know any other language than
 PHP and I started to get seriously bored with its abilities.
 
@@ -11,12 +17,31 @@ created a convenience class to access the serial port though the Linux file.
 Afterwards, I posted it to [PHP Classes](http://www.phpclasses.org/package/3679-PHP-Communicate-with-a-serial-port.html),
 and this probably is what brought it any visibility.
 
-Example
+Installation (Added 04-01-2020)
+------
+
+Add the codes under `repositories` into `composer.json`:
+
+```php
+{
+    "name": "laravel/laravel",
+    "type": "project",
+    "description": "The Laravel Framework.",
+    ...
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/jianjye/php-serial"
+        }
+    ]
+}
+```
+
+Example (Updated 04-01-2020)
 -------
 
 ```php
-<?php
-include 'PhpSerial.php';
+use JianJye\PhpSerial;
 
 // Let's start the class
 $serial = new PhpSerial;
@@ -33,10 +58,18 @@ $serial->confStopBits(1);
 $serial->confFlowControl("none");
 
 // Then we need to open it
-$serial->deviceOpen();
+$serial->deviceOpen('r+b');
 
 // To write into
+// You may need to convert a normal string into a binary string before sending in certain cases.
+// See hex2bin() or base_convert() function
 $serial->sendMessage("Hello !");
+
+// Or to read from
+$read = $serial->readPort();
+
+// If you want to change the configuration, the device must be closed
+$serial->deviceClose();
 ```
 
 State of the project

@@ -1,20 +1,29 @@
 {
-    "name": "hyperthese/php-serial",
-    "description": "Multi-platform serial port access convenience class",
+    "name": "jianjye/php-serial",
+    "description": "Multi-platform serial port access convenience package. Forked from Xowap/PHP-Serial.",
     "license": "GNU GPLv2",
+    "require": {
+        "php": ">= 5.5"
+    },
     "authors": [
         {
             "name": "Rémy Sanchez",
             "email": "remy.sanchez@hyperthese.net"
+        },
+        {
+            "name": "Jian Jye",
+            "email": "hello@jianjye.com"
         }
     ],
+    "homepage": "https://github.com/jianjye/php-serial",
     "minimum-stability": "stable",
+    "keywords": [
+        "php serial",
+        "jianjye"
+    ],
     "autoload": {
-        "classmap": ["src/"]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-develop": "1.0.x-dev"
+        "psr-4": {
+            "JianJye\\PhpSerial\\": "src"
         }
     }
 }

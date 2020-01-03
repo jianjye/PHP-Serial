@@ -1,5 +1,6 @@
 <?php
-include 'PhpSerial.php';
+
+use JianJye\PhpSerial;
 
 // Let's start the class
 $serial = new PhpSerial;
@@ -16,9 +17,11 @@ $serial->confStopBits(1);
 $serial->confFlowControl("none");
 
 // Then we need to open it
-$serial->deviceOpen();
+$serial->deviceOpen('r+b');
 
 // To write into
+// You may need to convert a normal string into a binary string before sending in certain cases.
+// See hex2bin() or base_convert() function
 $serial->sendMessage("Hello !");
 
 // Or to read from

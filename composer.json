@@ -3,7 +3,7 @@
     "description": "Multi-platform serial port access convenience package. Forked from Xowap/PHP-Serial.",
     "license": "GNU GPLv2",
     "require": {
-        "php": ">= 5.5",
+        "php": ">= 5.5"
     },
     "authors": [
         {
@@ -19,7 +19,7 @@
     "minimum-stability": "stable",
     "keywords": [
         "php serial",
-        "jianjye",
+        "jianjye"
     ],
     "autoload": {
         "psr-4": {

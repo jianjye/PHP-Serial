@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "PhpSerial\\": "src"
+            "JianJye\\": "src"
         }
     }
 }

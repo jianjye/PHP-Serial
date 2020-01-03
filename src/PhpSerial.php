@@ -1,4 +1,7 @@
 <?php
+
+namespace JianJye\PhpSerial;
+
 define ("SERIAL_DEVICE_NOTSET", 0);
 define ("SERIAL_DEVICE_SET", 1);
 define ("SERIAL_DEVICE_OPENED", 2);
@@ -38,7 +41,7 @@ class PhpSerial
      *
      * @return PhpSerial
      */
-    public function PhpSerial()
+    public function __construct()
     {
         setlocale(LC_ALL, "en_US");
 

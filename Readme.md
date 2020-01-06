@@ -1,11 +1,9 @@
 PHP Serial
 ==========
 
-**
-This is a fork from the original [Xowap\PHP-Serial](https://github.com/Xowap/PHP-Serial) repository. Main updates were to make it autoloadable via composer. Last tested working on PHP 7.3.5 on MacOs in 2020.
+**This is a fork from the original [Xowap\PHP-Serial](https://github.com/Xowap/PHP-Serial) repository. Main updates were to make it autoloadable via composer. Last tested working on PHP 7.3.5 on MacOs in 2020.**
 
-I do not intend to maintain this package beyond my own (limited) use case.
-**
+**I do not intend to maintain this package beyond my own (limited) use case.**
 
 PHP Serial was written at a time where I did not know any other language than
 PHP and I started to get seriously bored with its abilities.
@@ -30,8 +28,8 @@ Add the codes under `repositories` into `composer.json`:
     ...
     "repositories": [
         {
-            "type": "vcs",
-            "url": "https://github.com/jianjye/php-serial"
+            "type": "git",
+            "url": "https://github.com/jianjye/php-serial.git"
         }
     ]
 }
